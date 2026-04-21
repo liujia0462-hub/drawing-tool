@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>海报作图工具</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="panel controls">
+        <h1>海报作图工具</h1>
+        <p class="subtitle">快速制作简洁、美观的宣传海报</p>
+
+        <section>
+          <h2>画布设置</h2>
+          <label class="field">
+            <span>背景颜色</span>
+            <input id="bgColor" type="color" value="#ffffff" />
+          </label>
+          <button id="exportBtn" class="primary">导出 PNG</button>
+        </section>
+
+        <section>
+          <h2>添加元素</h2>
+          <label class="field">
+            <span>文字内容</span>
+            <input id="textInput" type="text" placeholder="输入海报文案" />
+          </label>
+          <button id="addTextBtn">添加文字</button>
+
+          <label class="field upload">
+            <span>上传图片</span>
+            <input id="imageUpload" type="file" accept="image/*" />
+          </label>
+        </section>
+
+        <section>
+          <h2>图层</h2>
+          <ul id="layerList" class="layer-list"></ul>
+        </section>
+      </aside>
+
+      <main class="canvas-wrap">
+        <div class="canvas-frame">
+          <canvas id="posterCanvas" width="900" height="1200"></canvas>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
